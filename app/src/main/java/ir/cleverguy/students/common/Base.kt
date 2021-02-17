@@ -10,7 +10,7 @@ import androidx.core.view.children
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
-import ir.cleverguy.myapplication.R
+import ir.cleverguy.students.R
 import java.lang.IllegalStateException
 
 abstract class AppActivity : AppCompatActivity(),AppView{
