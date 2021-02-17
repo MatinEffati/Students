@@ -8,19 +8,22 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
+            android:layout_height="?actionBarSize"
+            android:background="@color/blue">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/app_name"
                 android:gravity="center_vertical|start"
-                android:textAppearance="?textAppearanceHeadline5" />
+                android:textAppearance="?textAppearanceHeadline5"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/primary_extra_bold"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
