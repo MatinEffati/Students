@@ -3,13 +3,11 @@ package ir.cleverguy.students.data.repo
 import androidx.lifecycle.LiveData
 import io.reactivex.Completable
 import ir.cleverguy.students.data.Student
+import ir.cleverguy.students.data.repo.source.UserDataSource
 
-class UserRepositoryImpl : UserRepository {
-    override fun refreshStudent(): Completable {
-        TODO("Not yet implemented")
-    }
 
-    override fun getStudent(): LiveData<List<Student>> {
-        TODO("Not yet implemented")
-    }
+class UserRepositoryImpl(val userRemoteDataSource: UserDataSource,val userLocalDataSource: UserDataSource) : UserRepository {
+    override fun refreshStudent(): Completable = userRemoteDataSource.refreshStudent()
+
+    override fun getStudent(): LiveData<List<Student>> = userLocalDataSource.getStudent()
 }
